@@ -35,3 +35,9 @@
 .grey-background {
     background : lightgrey;
 }
+
+
+
+#secondButton {
+     visibility: hidden;
+}

@@ -29,6 +29,11 @@
         if (ideaText !== '') {
             ideatable.insert({ idea: ideaText, name: nameText, email: emailText, note: noteText });
         }
+
+        document.getElementById("secondButton").style.visibility = "visible";
+        
+
+
         evt.preventDefault();
     });
 }
