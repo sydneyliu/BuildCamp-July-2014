@@ -1,16 +1,19 @@
-﻿$(function () {
+﻿console.log("refreshing1");
+$(function () {
+
     var client = new WindowsAzure.MobileServiceClient("https://ideapilems.azure-mobile.net/", "DuKsKkjiWPNhyyAgpyWuAFkTarwhpY18"),
         ideatable = client.getTable('ideapileDB');
+        console.log("refreshing1");
         function refreshideaTable() {
-        var query = ideatable.where({ complete: false });
-        console.log("refreshing");
+            console.log("refreshing");
+        var query = ideatable.where({  });
         query.read().then(function (ideas) {
             var listItems = $.map(ideas, function (item) {
                 return $('<li>')
                     .attr('data-todoitem-id', item.id)
-                    .append($('<button class="item-delete">Delete</button>'))
+                    //.append($('<button class="item-delete">Delete</button>'))
                     .append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
-                    .append($('<div>').append($('<input class="item-text">').val(item.text)));
+                    .append($('<div>').append($('<p>').text(item.idea)));
             });
 
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
