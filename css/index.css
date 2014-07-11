@@ -4,3 +4,7 @@
 .bottom-buffer {
      margin-bottom:20px; 
 }
+
+.cont-margin {
+    margin-top : 15%;  /*for some reason, 15% of the page centers the div in index.html, you would expect 50% or 45% to do that */
+}
