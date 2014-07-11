@@ -14,8 +14,8 @@ $(function () {
                     //.append($('<button class="item-delete">Delete</button>'))
                     .append($('<td>').append($('<p>').text(item.idea)))
                     .append($('<td>').append($('<p>').text(item.name)))
-                    .append($('<td>').append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
-                    );
+                //.append($('<td>').append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete)))
+                ;
             });
 
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
