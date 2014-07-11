@@ -23,8 +23,8 @@
         $('#errorlog').append($('<li>').text(text));
     }
 
-    function getTodoItemId(formElement) {
-        return $(formElement).closest('li').attr('data-todoitem-id');
+    function getIdeaPileId(formElement) {
+        return $(formElement).closest('li').attr('data-ideapileDB-id');
     }
 
 
