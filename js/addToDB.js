@@ -13,7 +13,7 @@
             notebox = $('#notes'),
             noteText = notebox.val();
         if (ideaText !== '') {
-            ideatable.insert({ idea: ideaText})
+            ideatable.insert({ idea: ideaText, name: nameText, email: emailText, note: noteText})
         }
         evt.preventDefault();
     });
