@@ -9,11 +9,12 @@ $(function () {
         var query = ideatable.where({  });
         query.read().then(function (ideas) {
             var listItems = $.map(ideas, function (item) {
-                return $('<li>')
+                return $('<tr>')
                     .attr('data-todoitem-id', item.id)
                     //.append($('<button class="item-delete">Delete</button>'))
+                    .append($('<td>').append($('<p>').text(item.idea))
                     .append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
-                    .append($('<div>').append($('<p>').text(item.idea)));
+                    );
             });
 
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
