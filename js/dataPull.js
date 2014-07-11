@@ -3,7 +3,7 @@
         ideatable = client.getTable('ideapileDB');
         function refreshideaTable() {
         var query = ideatable.where({ complete: false });
-
+        console.log("refreshing");
         query.read().then(function (ideas) {
             var listItems = $.map(ideas, function (item) {
                 return $('<li>')
@@ -16,6 +16,7 @@
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
             $('#summary').html('<strong>' + ideas.length + '</strong> item(s)');
         }, handleError);
+        console.log("refreshing1");
     }
 
     function handleError(error) {
