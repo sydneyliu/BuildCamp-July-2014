@@ -26,7 +26,24 @@
     function getIdeaPileId(formElement) {
         return $(formElement).closest('li').attr('data-ideapileDB-id');
     }
+    // Handle update
+    $(document.body).on('change', '.item-text', function () {
+        var newText = $(this).val();
+        ideatable.update({ id: getIdeaPileId(this), text: newText }).then(null, handleError);
+    });
 
+    $(document.body).on('change', '.item-complete', function () {
+        var isComplete = $(this).prop('checked');
+        ideatable.update({ id: getIdeaPileId(this), complete: isComplete }).then(refreshideaTable, handleError);
+    });
+
+    // Handle delete
+    $(document.body).on('click', '.item-delete', function () {
+        ideatable.del({ id: getIdeaPileId(this) }).then(refreshideaTable, handleError);
+    });
+
+    // On initial load, start by fetching the current data
+    refreshideaTable();
 
 });
 
