@@ -12,8 +12,8 @@ $(function () {
                 return $('<tr>')
                     .attr('data-todoitem-id', item.id)
                     //.append($('<button class="item-delete">Delete</button>'))
-                    .append($('<td>').append($('<p>').text(item.idea))
-                    .append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
+                    .append($('<td>').append($('<p>').text(item.idea)))
+                    .append($('<td>').append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete))
                     );
             });
 
