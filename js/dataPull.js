@@ -49,6 +49,6 @@ $(function () {
     });
 
     // On initial load, start by fetching the current data
-    setInterval(refreshideaTable,5000);
+    setInterval(refreshideaTable,2500);
 
 });

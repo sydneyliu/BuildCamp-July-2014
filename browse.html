@@ -14,11 +14,7 @@
 
 <body>
 
-<<<<<<< HEAD
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-=======
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-opacity" role="navigation">
->>>>>>> 5049b297e1bc6543082cff7e00688486a1393bee
         <div class="container">
 
             <div class="navbar-header">
@@ -56,25 +52,21 @@
     
 
     <div class="container">
-        <div id="myTabContent" class="tab-content">
-            <div class="tab-pane active in" id="login">
-                <form class="form-horizontal" id="loginPadding" action='' method="POST">
-
-                     <article>
-                        <table class="table table-striped" >
-                            <tr>
-                                <th><strong>Ideas</strong></th>
-                                <th><strong>Submmitted By</strong></th>
-                                <th><strong>Favorite</strong></th>
-                            </tr>
-                            <tr id ='todo-items'>
-
-                            </tr>
-                        </table>
-                        <center><p id='summary'>Loading...</p>
-                        <img id='summary' src="img/loading.gif"></center>
-                    </article>
-                        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th><strong>Ideas</strong></th>
+                    <th><strong>Submmitted By</strong></th>
+                    <th><strong>Favorite</strong></th>
+                </tr>
+                <tr id='todo-items'></tr>
+            </table>
+            <center>
+                <p id='summary'>Loading...</p>
+                <img id='summary' src="img/loading.gif">
+            </center>
+        </div>
+    </div>
                <!-- <table class="table table-striped">
                     <tr>
                         <td><strong>Ideas</strong></td>
@@ -115,8 +107,6 @@
                         </td>
                     </tr>                                                                                
                 </table> -->
-            </div>
-        </div>
 
     <script src="js/jquery-1.11.1.js"></script>
     <script src="js/bootstrap.js"></script>

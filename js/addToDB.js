@@ -18,7 +18,6 @@
     //    evt.preventDefault();
     //});
     $('#submit-button').click(function (evt) {
-        window.location.href = 'browse.html';
         var ideabox = $('#idea'),//'#new-item-text'),
             ideaText = ideabox.val(),
             namebox = $('#name'),
