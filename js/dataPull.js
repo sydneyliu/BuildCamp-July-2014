@@ -49,10 +49,9 @@ $(function () {
     });
 
     // On initial load, start by fetching the current data
-    refreshideaTable();
+    setInterval(refreshideaTable,5000);
 
 });
-
 
 
 //Below is the class example we had.
