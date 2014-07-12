@@ -8,3 +8,19 @@
 .cont-margin {
     margin-top : 15%;  /*for some reason, 15% of the page centers the div in index.html, you would expect 50% or 45% to do that */
 }
+body {
+    background-image: url(/img/wallpaper.jpeg);
+}
+
+.other-color{
+    background: #fff;
+    opacity: 0.1;
+}
+
+.button-opacity{
+    opacity:1.0;
+}
+
+.navbar-opacity{
+    opacity:0.75;
+}
