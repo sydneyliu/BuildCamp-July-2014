@@ -56,7 +56,8 @@ $(function () {
             filteredtable = client.getTable('ideapileDB');
             function refreshideaTable1() {
                 console.log("refreshing");
-                var query = ideatable.where({});
+                var query = ideatable.where({ name: nameact });
+                console.log("query: " + query);
                 query.read().then(function (ideas) {
                     var listItems = $.map(ideas, function (item) {
                         return $('<tr>')
@@ -73,6 +74,8 @@ $(function () {
                 }, handleError);
                 console.log("refreshing1");
             }
+
+            setTimeout("refreshideaTable1", 100000000000);
         }
     };
     setInterval(refreshideaTable,2500);
