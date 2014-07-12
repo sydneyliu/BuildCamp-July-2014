@@ -1,4 +1,4 @@
-﻿$(function() {
+﻿$(function () {
     var client = new WindowsAzure.MobileServiceClient("https://ideapilems.azure-mobile.net/", "DuKsKkjiWPNhyyAgpyWuAFkTarwhpY18"),
         ideatable = client.getTable('ideapileDB');
 
@@ -30,12 +30,7 @@
             ideatable.insert({ idea: ideaText, name: nameText, email: emailText, note: noteText });
         }
         evt.preventDefault();
-<<<<<<< HEAD
     });
-=======
-    }
+}
     );
-
-    
->>>>>>> 28c5554bdeac02cf18dc58cf360c2dd34da33f8f
-});
+;

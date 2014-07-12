@@ -49,6 +49,32 @@ $(function () {
     });
 
     // On initial load, start by fetching the current data
+    document.getElementById('name-search').onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            var nameinput = $('#name-search');
+            var nameact = nameinput.val();
+            filteredtable = client.getTable('ideapileDB');
+            function refreshideaTable1() {
+                console.log("refreshing");
+                var query = ideatable.where({});
+                query.read().then(function (ideas) {
+                    var listItems = $.map(ideas, function (item) {
+                        return $('<tr>')
+                            .attr('data-todoitem-id', item.id)
+                            //.append($('<button class="item-delete">Delete</button>'))
+                            .append($('<td>').append($('<p>').text(item.idea)))
+                            .append($('<td>').append($('<p>').text(item.name)))
+                        //.append($('<td>').append($('<input type="checkbox" class="item-complete">').prop('checked', item.complete)))
+                        ;
+                    });
+
+                    $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
+                    $('#summary').html('<strong>' + ideas.length + '</strong> item(s)');
+                }, handleError);
+                console.log("refreshing1");
+            }
+        }
+    };
     setInterval(refreshideaTable,2500);
 
 });
